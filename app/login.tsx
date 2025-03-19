@@ -1,5 +1,6 @@
 import { View, Text, SafeAreaView, ImageBackground, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { Link } from 'expo-router';
 
 export default function login() {
   const f = require("../assets/images/rec.png");
@@ -7,7 +8,7 @@ export default function login() {
   const m = require("../assets/images/rec.png");
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{backgroundColor: "#FFFFFF"}}>
       <ImageBackground source={f} style={styles.background}>
         <Image source={c} />
       </ImageBackground>
@@ -16,19 +17,21 @@ export default function login() {
         <Text style={styles.text}>Enter your emails and password</Text>
       </View>
       <View style={styles.contain}>
-        <View>
+        <View style={styles.inp}>
           <Text style={styles.label}>Email</Text>
-          <TextInput />
+          <TextInput style={styles.input}
+          placeholder="example@gmail.com" />
         </View>
-        <View>
+        <View style={styles.inp}>
           <Text style={styles.label}>Password</Text>
-          <TextInput />
+          <TextInput style={styles.input}
+          placeholder="*******"/>
         </View>
         <Text style={styles.pass}>Forgot Password?</Text>
         <TouchableOpacity style={styles.btn}>Login</TouchableOpacity>
         <View style={styles.dont}>
           <Text style={styles.acc}>Don't have an account?</Text>
-          <Text style={styles.up}>Sign up</Text>
+          <Link href="/signup"><Text style={styles.up}>Sign up</Text></Link>
         </View>
       </View>
     </SafeAreaView>
@@ -40,6 +43,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 200,
     resizeMode: "cover",
+    display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -107,5 +111,18 @@ const styles = StyleSheet.create({
     color: "#53B175",
     fontWeight: 500,
     fontSize: 14,
+  },
+  input: {
+    borderBottomWidth: 1,
+    padding: 20,
+    borderBottomColor: "#E2E2E2",
+    height: 50,
+    fontSize: 16,
+    color: "#181725"
+  },
+  inp: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 5
   }
 })
