@@ -5,7 +5,8 @@ interface Data {
   name: string;
   ml: string;
   price: number;
-  img: string; // image path or url
+  img: ImageSourcePropType; // image path or url
+  link: string // image path or url
 }
 
 interface Product {
