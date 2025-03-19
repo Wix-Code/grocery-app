@@ -3,14 +3,18 @@ import React from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { StyleSheet } from 'react-native'
 
-interface item {
-  id: number,
-  name: string,
-  price: number,
-  img: string,
-  ml: string
+interface Item {
+  img: any;
+  name: string;
+  ml: string;
+  price: number;
 }
-export default function Card({item}) {
+
+interface CardProps {
+  item: Item;
+}
+
+export default function Card({item}: CardProps) {
  
   return (
     <View style={styles.card}>

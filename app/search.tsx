@@ -1,10 +1,10 @@
-import { View, Text, SafeAreaView, Image, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, SafeAreaView, Image, StyleSheet, ScrollView, TextInput } from 'react-native'
 import React from 'react'
 import { data } from './util/dummyData';
 import Card from './card';
 
-export default function beverages() {
-  const f = require("../assets/images/lef.png");
+export default function Search() {
+  const f = require("../assets/images/sea.png");
   const c = require("../assets/images/car.png");
   const m = require("../assets/images/fil.png");
   return (
@@ -12,8 +12,10 @@ export default function beverages() {
       <ScrollView style={{ flex: 1 }}>
         <View style={styles.contain}>
           <View style={styles.cont}>
-            <Image source={f} />
-            <Text style={styles.bev}>beverages</Text>
+            <View style={styles.div}>
+              <Image source={f} />
+              <TextInput style={{ width: "100%", fontSize: 14, color: "#181B19", outline: "none"}} placeholder='Egg' />
+            </View>
             <Image source={m} />
           </View>
           <View style={styles.grid}>
@@ -42,6 +44,21 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center"
+  },
+  div: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    //borderWidth: 1,
+    //borderColor: '#ccc',
+    borderRadius: 14,
+    gap: 10,
+    width: '90%',
+    height: 51,
+    marginBottom: 5,
+    //marginTop: 30,
+    backgroundColor: '#F2F3F2'
   },
   bev: {
     fontWeight: 800,
