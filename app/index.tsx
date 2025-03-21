@@ -10,7 +10,7 @@ export default function Index() {
         <Image source={img} />
         <Text style={styles.text}>Welcome to our store</Text>
         <Text style={styles.test}>Get your groceries in as fast as one hour</Text>
-        <TouchableOpacity style={styles.get}>Get Started</TouchableOpacity>
+        <Link href="/login" style={{width: "100%"}}><TouchableOpacity style={styles.get}>Get Started</TouchableOpacity></Link>
       </View>
     </ImageBackground>
   );

@@ -7,8 +7,8 @@ export default function signIn() {
   const f = require("../assets/images/f.png");
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        <Image source={img} />
+      <View style={{width: "100%"}}>
+        <Image source={img} style={{width: "100%"}}/>
         <View style={styles.contain}>
           <Text style={styles.text}>{`Get your groceries \nwith nectar`}</Text>
           <Text style={styles.connect}>Or connect with social media</Text>
@@ -29,10 +29,11 @@ export default function signIn() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
+    height: "100%",
+    width: "100%"
   },
   contain: {
     padding: 20,
-    width: "100%",
     display: "flex",
     flexDirection: "column",
     gap: 20
@@ -48,7 +49,6 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     paddingHorizontal: 30,
     height: 67,
-    width: "100%",
     gap: 50
   },
   icon: {
@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     paddingHorizontal: 30,
     height: 67,
-    width: "100%",
     gap: 50
   },
   connect: {

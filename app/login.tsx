@@ -8,7 +8,7 @@ export default function login() {
   const m = require("../assets/images/rec.png");
 
   return (
-    <SafeAreaView style={{backgroundColor: "#FFFFFF"}}>
+    <SafeAreaView style={{backgroundColor: "#FFFFFF", height: "100%"}}>
       <ImageBackground source={f} style={styles.background}>
         <Image source={c} />
       </ImageBackground>
@@ -118,7 +118,8 @@ const styles = StyleSheet.create({
     borderBottomColor: "#E2E2E2",
     height: 50,
     fontSize: 16,
-    color: "#181725"
+    color: "#181725",
+    outline: "none"
   },
   inp: {
     display: "flex",
