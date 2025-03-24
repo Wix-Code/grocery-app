@@ -10,7 +10,7 @@ export default function Explore() {
         <View style={styles.container}>
             <Text style={styles.text}>Find Products</Text>
             <View style={styles.inp}>
-              <Image source={require("../assets/images/sea.png")} />
+              <Image source={require("../../assets/images/sea.png")} />
               <TextInput style={{width: "100%", fontSize: 14, color: "#7C7C7C", outline: "none",}} underlineColorAndroid="transparent" placeholder='Search Store' />
             </View>
             <View style={styles.grid}>

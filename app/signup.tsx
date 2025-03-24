@@ -1,46 +1,49 @@
-import { View, Text, SafeAreaView, ImageBackground, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, SafeAreaView, ImageBackground, Image, StyleSheet, TextInput, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 
 export default function signup() {
   const f = require("../assets/images/rec.png");
   const c = require("../assets/images/car.png");
   const m = require("../assets/images/rec.png");
-
+  const router = useRouter()
   return (
-    <SafeAreaView style={{backgroundColor: "#FFFFFF"}}>
-      <ImageBackground source={f} style={styles.background}>
-        <Image source={c} />
-      </ImageBackground>
-      <View style={styles.div}>
-        <Text style={styles.test}>Sign Up</Text>
-        <Text style={styles.text}>Enter your emails and password</Text>
-      </View>
-        <View style={styles.contain}>
-        <View style={styles.inp}>
-          <Text style={styles.label}>Username</Text>
-          <TextInput style={styles.input}
-          placeholder="Ogbonna Ugochukwu" />
+    <SafeAreaView style={{flex: 1, backgroundColor: "#FFFFFF"}}>
+      <ScrollView style={{flex: 1}}>
+        <ImageBackground source={f} style={styles.background}>
+          <Image source={c} />
+        </ImageBackground>
+        <View style={styles.div}>
+          <Text style={styles.test}>Sign Up</Text>
+          <Text style={styles.text}>Enter your emails and password</Text>
         </View>
-        <View style={styles.inp}>
-          <Text style={styles.label}>Email</Text>
-          <TextInput style={styles.input}
-          placeholder="example@gmail.com" />
+          <View style={styles.contain}>
+          <View style={styles.inp}>
+            <Text style={styles.label}>Username</Text>
+            <TextInput style={styles.input}
+            placeholder="Ogbonna Ugochukwu" />
+          </View>
+          <View style={styles.inp}>
+            <Text style={styles.label}>Email</Text>
+            <TextInput style={styles.input}
+            placeholder="example@gmail.com" />
+          </View>
+          <View style={styles.inp}>
+            <Text style={styles.label}>Password</Text>
+            <TextInput style={styles.input}
+            placeholder="*******"/>
+          </View>
+          <Text style={styles.pass}>By continuing you agree to our Terms of Service
+          and Privacy Policy.</Text>
+          <TouchableOpacity style={styles.btn} onPress={()=>router.push("/login")}>
+            <Text style={{ fontSize: 20, color: "#FFFFFF",}}>Sign up</Text>
+          </TouchableOpacity>
+          <View style={styles.dont}>
+            <Text style={styles.acc}>Already have an account?</Text>
+            <Link href="/login"><Text style={styles.up}>Sign in</Text></Link>
+          </View>
         </View>
-        <View style={styles.inp}>
-          <Text style={styles.label}>Password</Text>
-          <TextInput style={styles.input}
-          placeholder="*******"/>
-        </View>
-        <Text style={styles.pass}>By continuing you agree to our Terms of Service
-        and Privacy Policy.</Text>
-        <TouchableOpacity style={styles.btn}>Sign up</TouchableOpacity>
-        <View style={styles.dont}>
-          <Text style={styles.acc}>Already have an account?</Text>
-          <Link href="/login"><Text style={styles.up}>Sign in</Text></Link>
-        </View>
-      </View>
-      
+      </ScrollView> 
     </SafeAreaView>
   )
 }
@@ -127,7 +130,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderBottomWidth: 1,
-    padding: 20,
+    paddingHorizontal: 20,
     borderBottomColor: "#E2E2E2",
     height: 50,
     fontSize: 16,

@@ -24,7 +24,7 @@ export default function favorites() {
                   <View style={{display: "flex", flexDirection: "row", alignItems: "center", gap: 10}}>
                     <Text style={{fontSize: 16, color: "#181725", fontWeight: 700}}>${item.price}</Text>
                     <TouchableOpacity style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
-                      <Image  source={require("../assets/images/left.png")}/>
+                      <Image  source={require("../../assets/images/left.png")}/>
                     </TouchableOpacity>
                   </View>
                 </View>

@@ -1,12 +1,12 @@
 import { View, Text, SafeAreaView, ImageBackground, Image, StyleSheet, TextInput, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 
 export default function login() {
   const f = require("../assets/images/rec.png");
   const c = require("../assets/images/car.png");
   const m = require("../assets/images/rec.png");
-
+  const router = useRouter()
   return (
     <SafeAreaView style={{flex: 1,backgroundColor: "#FFFFFF"}}>
       <ScrollView style={{flex: 1}}>
@@ -29,7 +29,9 @@ export default function login() {
             placeholder="*******"/>
           </View>
           <Text style={styles.pass}>Forgot Password?</Text>
-          <TouchableOpacity style={styles.btn}>Login</TouchableOpacity>
+          <TouchableOpacity style={styles.btn} onPress={()=> router.push("/explore")}>
+            <Text style={{ fontSize: 20, color: "#FFFFFF",}}>Login</Text>
+          </TouchableOpacity>
           <View style={styles.dont}>
             <Text style={styles.acc}>Don't have an account?</Text>
             <Link href="/signup"><Text style={styles.up}>Sign up</Text></Link>
@@ -116,7 +118,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderBottomWidth: 1,
-    padding: 20,
+    paddingHorizontal: 20,
     borderBottomColor: "#E2E2E2",
     height: 50,
     fontSize: 16,

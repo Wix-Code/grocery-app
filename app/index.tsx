@@ -1,7 +1,8 @@
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { Text, View, Modal, StyleSheet, ImageBackground, Button, Image, TouchableOpacity } from "react-native";
 
 export default function Index() {
+  const router = useRouter();
   const image = require("../assets/images/back.png");
   const img = require("../assets/images/white.png");
   return (
@@ -10,7 +11,11 @@ export default function Index() {
         <Image source={img} />
         <Text style={styles.text}>Welcome to our store</Text>
         <Text style={styles.test}>Get your groceries in as fast as one hour</Text>
-        <Link href="/login" style={{width: "100%"}}><TouchableOpacity style={styles.get}>Get Started</TouchableOpacity></Link>
+        <Link href="/login" style={{ width: "100%" }}>
+          <TouchableOpacity style={styles.get} onPress={() => router.push("/login")}>
+            <Text style={{color: "#FFFFFF",fontSize: 18}}>Get Started</Text>
+          </TouchableOpacity>
+        </Link>
       </View>
     </ImageBackground>
   );
