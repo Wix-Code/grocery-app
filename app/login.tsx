@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, ImageBackground, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, SafeAreaView, ImageBackground, Image, StyleSheet, TextInput, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
 import { Link } from 'expo-router';
 
@@ -8,32 +8,34 @@ export default function login() {
   const m = require("../assets/images/rec.png");
 
   return (
-    <SafeAreaView style={{backgroundColor: "#FFFFFF", height: "100%"}}>
-      <ImageBackground source={f} style={styles.background}>
-        <Image source={c} />
-      </ImageBackground>
-      <View style={styles.div}>
-        <Text style={styles.test}>Loging</Text>
-        <Text style={styles.text}>Enter your emails and password</Text>
-      </View>
-      <View style={styles.contain}>
-        <View style={styles.inp}>
-          <Text style={styles.label}>Email</Text>
-          <TextInput style={styles.input}
-          placeholder="example@gmail.com" />
+    <SafeAreaView style={{flex: 1,backgroundColor: "#FFFFFF"}}>
+      <ScrollView style={{flex: 1}}>
+        <ImageBackground source={f} style={styles.background}>
+          <Image source={c} />
+        </ImageBackground>
+        <View style={styles.div}>
+          <Text style={styles.test}>Loging</Text>
+          <Text style={styles.text}>Enter your emails and password</Text>
         </View>
-        <View style={styles.inp}>
-          <Text style={styles.label}>Password</Text>
-          <TextInput style={styles.input}
-          placeholder="*******"/>
+        <View style={styles.contain}>
+          <View style={styles.inp}>
+            <Text style={styles.label}>Email</Text>
+            <TextInput style={styles.input}
+            placeholder="example@gmail.com" />
+          </View>
+          <View style={styles.inp}>
+            <Text style={styles.label}>Password</Text>
+            <TextInput style={styles.input}
+            placeholder="*******"/>
+          </View>
+          <Text style={styles.pass}>Forgot Password?</Text>
+          <TouchableOpacity style={styles.btn}>Login</TouchableOpacity>
+          <View style={styles.dont}>
+            <Text style={styles.acc}>Don't have an account?</Text>
+            <Link href="/signup"><Text style={styles.up}>Sign up</Text></Link>
+          </View>
         </View>
-        <Text style={styles.pass}>Forgot Password?</Text>
-        <TouchableOpacity style={styles.btn}>Login</TouchableOpacity>
-        <View style={styles.dont}>
-          <Text style={styles.acc}>Don't have an account?</Text>
-          <Link href="/signup"><Text style={styles.up}>Sign up</Text></Link>
-        </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   )
 }

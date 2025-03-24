@@ -15,10 +15,10 @@ export default function order_success() {
           it’s way to being processed</Text>
         </View>
         <View>
-          <TouchableOpacity>
-            <Text>Track Order</Text>
+          <TouchableOpacity style={{backgroundColor: "#53B175", height: 67, borderRadius: 16, display: "flex", justifyContent: "center", alignItems: "center"}}>
+            <Text style={{color: "#FFF9FF", fontWeight: "semibold", fontSize: 18}}>Track Order</Text>
           </TouchableOpacity>
-          <Text>Back to home</Text>
+          <Text style={{color: "#181725", fontWeight: "semibold", fontSize: 18}}>Back to home</Text>
         </View>
       </View>
     </SafeAreaView>

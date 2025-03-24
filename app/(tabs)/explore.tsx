@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, ScrollView, Image, TextInput, StyleSheet } from 'react-native'
 import React from 'react'
-import { product } from './util/dummyData'
+import { product } from '../util/dummyData'
 import { Link } from 'expo-router'
 
 export default function Explore() {

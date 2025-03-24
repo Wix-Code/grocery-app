@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, ScrollView, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { data, product } from './util/dummyData'
+import { data, product } from '../util/dummyData'
 import { Image } from 'react-native'
 
 export default function favorites() {
