@@ -1,13 +1,23 @@
 import { Tabs } from 'expo-router';
+import { Ionicons } from "@expo/vector-icons";
 
 export default function TabLayout() {
+  const links = [
+    {
+      name: 'shop',
+      link: "/shop",
+      title: "Shop",
+      icon: <Ionicons />
+    },
+    {
+    }
+  ]
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
       <Tabs.Screen
         name="shop"
         options={{
           title: 'Shop',
-          //tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
         }}
       />
       <Tabs.Screen

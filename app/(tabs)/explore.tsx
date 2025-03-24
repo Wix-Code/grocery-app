@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView, ScrollView, Image, TextInput, StyleSheet } from 'react-native'
 import React from 'react'
-import { product } from '../util/dummyData'
 import { Link } from 'expo-router'
+import { product } from '../util/dummyData'
 
 export default function Explore() {
   return (
@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: "column",
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
+    marginBottom: 20
   },
   text: {
     fontSize: 20,
