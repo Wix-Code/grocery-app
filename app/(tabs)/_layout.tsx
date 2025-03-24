@@ -25,7 +25,7 @@ export default function TabLayout() {
           tabBarLabel: ({ focused }) => (
             <Text
               style={{
-                fontWeight: "semibold",
+                fontWeight: 700,
                 fontSize: 12,
                 color: focused ? "#53B175" : "#181725",
               }}
@@ -43,7 +43,7 @@ export default function TabLayout() {
           tabBarLabel: ({ focused }) => (
             <Text
               style={{
-                fontWeight: "semibold",
+                fontWeight: 700,
                 fontSize: 12,
                 color: focused ? "#53B175" : "#181725",
               }}
@@ -62,7 +62,7 @@ export default function TabLayout() {
           tabBarLabel: ({ focused }) => (
             <Text
               style={{
-                fontWeight: "semibold",
+                fontWeight:700,
                 fontSize: 12,
                 color: focused ? "#53B175" : "#181725",
               }}
@@ -81,7 +81,7 @@ export default function TabLayout() {
           tabBarLabel: ({ focused }) => (
             <Text
               style={{
-                fontWeight: "semibold",
+                fontWeight: 700,
                 fontSize: 12,
                 color: focused ? "#53B175" : "#181725",
               }}
@@ -100,7 +100,7 @@ export default function TabLayout() {
           tabBarLabel: ({ focused }) => (
             <Text
               style={{
-                fontWeight: "semibold",
+                fontWeight: 700,
                 fontSize: 12,
                 color: focused ? "#53B175" : "#181725",
               }}

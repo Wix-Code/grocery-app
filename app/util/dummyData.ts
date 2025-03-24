@@ -6,7 +6,7 @@ interface Data {
   ml: string;
   price: number;
   img: ImageSourcePropType; // image path or url
-  link: string // image path or url
+ // link: string // image path or url
 }
 
 interface Product {
@@ -22,14 +22,14 @@ export const data: Data[] = [
     name: "Diet Coke",
     ml: "355ml, Price",
     price: 1.99,
-    img: require("../../assets/images/pro.png")
+    img: require("../../assets/images/ban.png")
   },
   {
     id: 2,
     name: "Diet Coke",
     ml: "355ml, Price",
     price: 1.99,
-    img: require("../../assets/images/pro1.png")
+    img: require("../../assets/images/ban.png")
   },
   {
     id: 3,
