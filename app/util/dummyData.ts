@@ -6,7 +6,7 @@ interface Data {
   ml: string;
   price: number;
   img: ImageSourcePropType; // image path or url
- // link: string // image path or url
+  link: string // image path or url
 }
 
 interface Product {
@@ -22,27 +22,31 @@ export const data: Data[] = [
     name: "Diet Coke",
     ml: "355ml, Price",
     price: 1.99,
-    img: require("../../assets/images/ban.png")
+    img: require("../../assets/images/ban.png"),
+    link: "/beverages"
   },
   {
     id: 2,
     name: "Diet Coke",
     ml: "355ml, Price",
     price: 1.99,
-    img: require("../../assets/images/ban.png")
+    img: require("../../assets/images/ban.png"),
+    link: "/beverages"
   },
   {
     id: 3,
     name: "Diet Coke",
     ml: "355ml, Price",
     price: 1.99,
-    img: require("../../assets/images/pro2.png")
+    img: require("../../assets/images/pro2.png"),
+    link: "/beverages"
   },
   {
     id: 4,
     name: "Diet Coke",
     ml: "355ml, Price",
     price: 1.99,
+    link: "/beverages",
     img: require("../../assets/images/pro3.png")
   },
   {
@@ -50,28 +54,32 @@ export const data: Data[] = [
     name: "Diet Coke",
     ml: "355ml, Price",
     price: 1.99,
-    img: require("../../assets/images/pro.png")
+    img: require("../../assets/images/pro.png"),
+    link: "/beverages"
   },
   {
     id: 6,
     name: "Diet Coke",
     ml: "355ml, Price",
     price: 1.99,
-    img: require("../../assets/images/pro1.png")
+    img: require("../../assets/images/pro1.png"),
+    link: "/beverages"
   },
   {
     id: 7,
     name: "Diet Coke",
     ml: "355ml, Price",
     price: 1.99,
-    img: require("../../assets/images/pro2.png")
+    img: require("../../assets/images/pro2.png"),
+    link: "/beverages"
   },
   {
     id: 8,
     name: "Diet Coke",
     ml: "355ml, Price",
     price: 1.99,
-    img: require("../../assets/images/pro3.png")
+    img: require("../../assets/images/pro3.png"),
+    link: "/beverages"
   },
 ]
 
@@ -126,3 +134,9 @@ export const product:Product[] = [
   },
 ]
 //https://www.figma.com/design/ujdeCVhgfPqWAsEBkBcNA1/Online-Groceries-App-UI-(Community)?node-id=1-2&p=f&t=7cNcyLIIsewwlOtU-0
+
+//https://www.figma.com/design/Nnk3Cx6Da6CdwV6hBnDZqr/Coffee-Shop-Mobile-App-Design-(Community)?t=3F9l9PdxcvRAPZ5z-0
+
+//https://www.figma.com/design/RUNkmlI0Ecb2pmfK8rlINH/Food-Delivery-App-(Community)?node-id=0-1&p=f&t=hsR4U5RFCuiqxXXh-0
+
+//https://www.figma.com/design/VoMIFLXse05eKt7OphrcuJ/WhatsApp-UI-Screens-(Community)?node-id=0-8102&p=f&t=1A9wfX6Qsx8LHT8k-0

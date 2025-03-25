@@ -21,7 +21,7 @@ export default function Explore() {
                         <Image source={item.img} />
                       <Link href={item.link} style={{ marginTop: 10,textAlign: "center"}}>
                         <Text style={{ fontWeight: 700, fontSize: 16, color: "#181725" }}>{item.name}</Text>
-                       </Link>   
+                      </Link>   
                     </View>     
                   )
                 })

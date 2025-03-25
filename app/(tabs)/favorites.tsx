@@ -8,7 +8,7 @@ export default function favorites() {
     <SafeAreaView style={{flex:1,backgroundColor: "#FFFFFF"}}>
       <ScrollView style={{flex: 1}}>
         <View>
-          <Text style={{textAlign:"center", fontWeight: 700, fontSize: 20, marginTop: 10}}>Favorites</Text>
+          <Text style={{textAlign:"center", fontWeight: 700, fontSize: 20, paddingVertical: 20, borderColor: "#F2F3F2", borderBottomWidth: 1, position: "sticky", top:0, zIndex: 50, backgroundColor: "#53B175", color: "#FFFFFF"}}>Favorites</Text>
           <View style={{marginTop: 30,borderTopWidth: 1,borderBottomWidth: 1,
     borderColor: '#E2E2E2',}}>
             {data.map((item) => {
