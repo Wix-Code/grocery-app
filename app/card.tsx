@@ -26,7 +26,7 @@ export default function Card({item}: CardProps) {
       <Link href="/product_details"><Text style={styles.fir}>{item.name}</Text></Link>
       <Text style={styles.sec}>{item.ml}</Text>
       <View style={styles.btn}>
-        <Text style={styles.thr}>{item.price}</Text>
+        <Text style={styles.thr}>${item.price}</Text>
         <TouchableOpacity style={styles.button}>
           <Image source={require("../assets/images/pl.png")} />
         </TouchableOpacity>
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     display: "flex",
     flexDirection: "column",
+    justifyContent: "space-between",
     gap: 10,
     marginTop: 20
   },
