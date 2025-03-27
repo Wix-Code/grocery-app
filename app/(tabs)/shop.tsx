@@ -20,6 +20,9 @@ export default function Shop() {
               <TextInput style={{width: "100%", fontSize: 14, color: "#7C7C7C", outline: "none",}} underlineColorAndroid="transparent" placeholder='Search Store' />
             </View>
           </View>
+          <View style={{marginHorizontal: 20, marginBottom: 10}}>
+            <Image style={{width: "100%"}} source={require("../../assets/images/bann.png")} />
+          </View>
           <View style={{display:"flex", justifyContent: "space-between", alignItems: "center", flexDirection: "row", marginHorizontal: 20 }}>
             <Text style={{color: "#181725", fontWeight: "bold", fontSize: 22}}>Exclusive Offer</Text>
             <Link style={{color: "#53B175", fontWeight: "semibold", fontSize: 16}} href="/explore">See all</Link>
